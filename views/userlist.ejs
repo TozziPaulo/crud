@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+ <h1 class="text-center title-1"> Lista de Usu&aacute;rios </h1> 
+
+ <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Usuário</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% userlist.forEach(function(user){ %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><a href="mailto:<%= user.email %>"><%= user.email %></a></td>
+          </tr>
+          <%})%>
+
+        </tbody>
+    </table>
+    <a href="newuser" class="btn btn-info btn-block" role="button">Adicionar Novo Usuário</a>
+
+</div>
+</body>
+</html>
